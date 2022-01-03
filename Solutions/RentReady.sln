@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentReady.Functions", "..\Source\RentReady.Functions\RentReady.Functions.csproj", "{05DAE772-6DC1-41FC-96E3-E566760BECCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentReady.Common", "..\Source\RentReady.Common\RentReady.Common.csproj", "{C2EB4195-061D-4033-B9E3-58100A046C22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05DAE772-6DC1-41FC-96E3-E566760BECCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05DAE772-6DC1-41FC-96E3-E566760BECCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05DAE772-6DC1-41FC-96E3-E566760BECCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05DAE772-6DC1-41FC-96E3-E566760BECCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2EB4195-061D-4033-B9E3-58100A046C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2EB4195-061D-4033-B9E3-58100A046C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2EB4195-061D-4033-B9E3-58100A046C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2EB4195-061D-4033-B9E3-58100A046C22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

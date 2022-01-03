@@ -1,0 +1,10 @@
+
+.idea/
+
+Source/RentReady.Common/bin/
+
+Source/RentReady.Common/obj/
+
+Source/RentReady.Functions/obj/
+
+Source/RentReady.Functions/bin/
