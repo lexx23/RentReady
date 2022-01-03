@@ -11,7 +11,7 @@ variables:
   azureSubscription: '3a048fac-a1a7-4b14-b41c-32b8f58b05fd'
 
   # Function app name
-  functionAppName: ''
+  functionAppName: 'rentready-test'
 
   # Agent VM image name
   vmImageName: 'vs2017-win2016'
