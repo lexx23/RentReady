@@ -83,11 +83,13 @@ stages:
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               appSettings: |
                 [ 
-                  "name": "dataverse",
-                  "value": {
-                    "userName": "$(Dataverse_UserName)",
-                    "password" : "$(Dataverse_Password)",
-                    "environment": "$(Dataverse_Environment)"
-                  },
-                  "slotSetting": false
+                  {
+                    "name": "dataverse",
+                    "value": {
+                      "userName": "$(Dataverse_UserName)",
+                      "password" : "$(Dataverse_Password)",
+                      "environment": "$(Dataverse_Environment)"
+                    },
+                    "slotSetting": false
+                  }
                 ]
