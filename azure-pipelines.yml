@@ -38,6 +38,12 @@ stages:
           $(workingDirectory)/*.csproj
         arguments: --output $(System.DefaultWorkingDirectory)/publish_output --configuration Release
 
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'test'
+        projects: '$(System.DefaultWorkingDirectory)/Source/RentReady.Tests/RentReady.Tests.csproj'
+        testRunTitle: 'Run tests'
+
     - task: ArchiveFiles@2
       displayName: 'Archive files'
       inputs:
@@ -50,27 +56,9 @@ stages:
     - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
 
-- stage: Testing
-  dependsOn: Build
-  condition: succeeded()
-  displayName: Unit testing stage
-
-  jobs:
-  - job: Testing
-    displayName: Unit testing
-    pool:
-      vmImage: $(vmImageName)
-
-    steps:  
-    - task: DotNetCoreCLI@2
-      inputs:
-        command: 'test'
-        projects: '$(System.DefaultWorkingDirectory)/Source/RentReady.Tests/RentReady.Tests.csproj'
-        testRunTitle: 'Run test'
-
 - stage: Deploy
   displayName: Deploy stage
-  dependsOn: Testing
+  dependsOn: Build
   condition: succeeded()
 
   jobs:
