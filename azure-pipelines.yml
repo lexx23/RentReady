@@ -50,14 +50,14 @@ stages:
     - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
 
-- stage: Tesing
+- stage: Testing
   dependsOn: Build
   condition: succeeded()
-  displayName: Unit tesing stage
+  displayName: Unit testing stage
 
   jobs:
-  - job: Tesing
-    displayName: Unit tesing
+  - job: Testing
+    displayName: Unit testing
     pool:
       vmImage: $(vmImageName)
 
