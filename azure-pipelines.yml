@@ -85,11 +85,7 @@ stages:
                 [ 
                   {
                     "name": "dataverse",
-                    "value": {
-                      "userName": "$(Dataverse_UserName)",
-                      "password" : "$(Dataverse_Password)",
-                      "environment": "$(Dataverse_Environment)"
-                    },
+                    "value": '{"userName":"$(Dataverse_UserName)", "password":"$(Dataverse_Password)","environment":"$(Dataverse_Environment)"}',
                     "slotSetting": false
                   }
                 ]
