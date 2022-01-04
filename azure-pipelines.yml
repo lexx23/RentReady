@@ -39,6 +39,7 @@ stages:
         arguments: --output $(System.DefaultWorkingDirectory)/publish_output --configuration Release
 
     - task: DotNetCoreCLI@2
+      displayName: Run tests
       inputs:
         command: 'test'
         projects: '$(System.DefaultWorkingDirectory)/Source/RentReady.Tests/RentReady.Tests.csproj'
@@ -80,3 +81,13 @@ stages:
               appType: functionApp
               appName: $(functionAppName)
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
+              appSettings: |
+              [ 
+                {
+                  "dataverse": {
+                    "userName": "$(Dataverse.UserName)",
+                    "password" : "$(Dataverse.Password)",
+                    "environment": "$(Dataverse.Environment)"
+                  }
+                }
+              ]
