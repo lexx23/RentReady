@@ -26,7 +26,7 @@ namespace RentReady.Functions.Functions
         
         
         [FunctionName("AddTimeEntity")]
-        public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "post", Route = "timeEntity")] HttpRequest req, ILogger log, CancellationToken token)
+        public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "timeEntity")] HttpRequest req, ILogger log, CancellationToken token)
         {
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             if (string.IsNullOrEmpty(requestBody) || !JsonFunctions.TryParseJson<DateRangeEntity>(requestBody, out var dateRange))
