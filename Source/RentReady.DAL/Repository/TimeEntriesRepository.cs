@@ -25,9 +25,9 @@ namespace RentReady.DAL.Repository
         private readonly ServiceClient _serviceClient;
         private readonly Dataverse _dataverseSettings;
 
-        public TimeEntriesRepository(ILogger<TimeEntriesRepository> logger, IOptions<Dataverse> dataverseOptions)
+        public TimeEntriesRepository(ILogger<TimeEntriesRepository> logger, Dataverse dataverseOptions)
         {
-            _dataverseSettings = dataverseOptions.Value;
+            _dataverseSettings = dataverseOptions;
 
             if (string.IsNullOrEmpty(_dataverseSettings.UserName) || string.IsNullOrEmpty(_dataverseSettings.Password) || string.IsNullOrEmpty(_dataverseSettings.Environment))
                 throw new ArgumentException("Dataverse username,password or environment variables not found or empty");

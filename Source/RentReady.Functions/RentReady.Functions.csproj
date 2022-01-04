@@ -2,7 +2,6 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <AzureFunctionsVersion>V4</AzureFunctionsVersion>
-        <UserSecretsId>f472b21d-a95f-4d54-a656-3148c4093ca9</UserSecretsId>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
