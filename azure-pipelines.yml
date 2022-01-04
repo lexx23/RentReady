@@ -82,6 +82,4 @@ stages:
               appName: $(functionAppName)
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               appSettings: |
-                -Dataverse_UserName $(Dataverse_UserName)
-                -Dataverse_Password $(Dataverse_Password)
-                -Dataverse_Environment $(Dataverse_Environment)
+                -Dataverse_UserName $(Dataverse_UserName) -Dataverse_Password $(Dataverse_Password) -Dataverse_Environment $(Dataverse_Environment)
