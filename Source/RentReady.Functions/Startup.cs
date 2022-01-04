@@ -15,7 +15,7 @@ namespace RentReady.Functions
             builder.Services.AddDataAccessLayer();
 
             builder.Services.AddOptions<Dataverse>()
-                .Configure<IConfiguration>((settings, configuration) => { configuration.GetSection(nameof(Dataverse)).Bind(settings); });
+                .Configure<IConfiguration>((settings, configuration) => { configuration.GetSection("values:" + nameof(Dataverse)).Bind(settings); });
            
         }
     }
