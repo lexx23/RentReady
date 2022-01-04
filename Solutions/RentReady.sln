@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentReady.Functions", "..\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentReady.Common", "..\Source\RentReady.Common\RentReady.Common.csproj", "{C2EB4195-061D-4033-B9E3-58100A046C22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentReady.Tests", "..\Source\RentReady.Tests\RentReady.Tests.csproj", "{FA1F485A-62FB-433C-8BBF-9A0DDE2A2418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentReady.DAL", "..\Source\RentReady.DAL\RentReady.DAL.csproj", "{2528D06E-7EC9-4602-A023-B1970A7CC7E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{C2EB4195-061D-4033-B9E3-58100A046C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2EB4195-061D-4033-B9E3-58100A046C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2EB4195-061D-4033-B9E3-58100A046C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA1F485A-62FB-433C-8BBF-9A0DDE2A2418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA1F485A-62FB-433C-8BBF-9A0DDE2A2418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA1F485A-62FB-433C-8BBF-9A0DDE2A2418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA1F485A-62FB-433C-8BBF-9A0DDE2A2418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2528D06E-7EC9-4602-A023-B1970A7CC7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2528D06E-7EC9-4602-A023-B1970A7CC7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2528D06E-7EC9-4602-A023-B1970A7CC7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2528D06E-7EC9-4602-A023-B1970A7CC7E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

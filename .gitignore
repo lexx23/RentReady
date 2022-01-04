@@ -8,3 +8,11 @@ Source/RentReady.Common/obj/
 Source/RentReady.Functions/obj/
 
 Source/RentReady.Functions/bin/
+
+Source/RentReady.DAL/bin/
+
+Source/RentReady.DAL/obj/
+
+Source/RentReady.Tests/bin/
+
+Source/RentReady.Tests/obj/
