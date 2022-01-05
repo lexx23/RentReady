@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows.Markup;
 using Newtonsoft.Json;
 
 namespace RentReady.Common.Entity

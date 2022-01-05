@@ -32,11 +32,11 @@ namespace RentReady.Functions.Functions
             if (string.IsNullOrEmpty(requestBody) || !JsonFunctions.TryParseJson<DateRangeEntity>(requestBody, out var dateRange))
                 return new BadRequestObjectResult("Please pass a startOn, endOn in the request body");
                 
-            if(dateRange.StartOn > dateRange.EndOn)
+            if(dateRange.StartOn.Date >= dateRange.EndOn.Date)
                 return new BadRequestObjectResult("Param endOn must be greater than startOn");
             
-            var dates = Enumerable.Range(0, 1 + dateRange.EndOn.Subtract(dateRange.StartOn).Days)
-                .Select(offset => dateRange.StartOn.AddDays(offset))
+            var dates = Enumerable.Range(0, 1 + dateRange.EndOn.Date.Subtract(dateRange.StartOn.Date).Days)
+                .Select(offset => dateRange.StartOn.Date.AddDays(offset))
                 .ToArray(); 
             
             var existingRecords = await _timeEntriesRepository.GetAsync(dates, token);

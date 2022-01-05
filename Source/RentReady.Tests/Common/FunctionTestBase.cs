@@ -3,12 +3,12 @@ using Microsoft.Extensions.Logging.Abstractions;
 
 namespace RentReady.Tests.Common
 {
-    public abstract class FunctionTest
+    public abstract class FunctionTestBase
     {
         protected readonly ILogger Logger;
         protected readonly HttpRequestMock RequestMock;
 
-        protected FunctionTest()
+        protected FunctionTestBase()
         {
             RequestMock = new HttpRequestMock();
             Logger = NullLoggerFactory.Instance.CreateLogger("Null Logger");

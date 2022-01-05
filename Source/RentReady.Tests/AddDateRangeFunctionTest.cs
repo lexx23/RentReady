@@ -11,7 +11,7 @@ using RentReady.Tests.Common;
 namespace RentReady.Tests
 {
     [TestClass]
-    public class AddDateRangeFunctionTest : FunctionTest
+    public class AddDateRangeFunctionTest : FunctionTestBase
     {
         private readonly AddTimeEntity _function;
         private readonly TimeEntriesRepositoryMock _timeEntriesRepositoryMock;
@@ -25,7 +25,7 @@ namespace RentReady.Tests
 
 
         [TestMethod]
-        public async Task EndOnGreaterThanStartOn()
+        public async Task EndOnGreaterOrEqualStartOn()
         {
             var body = JsonConvert.SerializeObject(new DateRangeEntity()
             {
@@ -65,7 +65,7 @@ namespace RentReady.Tests
         [TestMethod]
         public async Task IgnoreExistingRecords()
         {
-            var baseDate = DateTime.Parse("2021-12-15 08:00:00");
+            var baseDate = DateTime.Parse("2021-12-15 08:00:00").Date;
             
             _timeEntriesRepositoryMock.Clear();
             _timeEntriesRepositoryMock.InsertRecord(new TimeEntryEntity(string.Empty, baseDate.AddDays(-9), baseDate.AddDays(-8)));
