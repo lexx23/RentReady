@@ -8,7 +8,7 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: $(azureSubscription)
+  azureSubscription: 'b20b96e3-9936-4fbf-b368-acb5337743a9'
 
   # Function app name
   functionAppName: $(functionAppName)
