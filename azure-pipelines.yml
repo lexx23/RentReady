@@ -8,10 +8,10 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '3a048fac-a1a7-4b14-b41c-32b8f58b05fd'
+  azureSubscription: '9f74c765-21a7-4340-958d-4fa57438a32e'
 
   # Function app name
-  functionAppName: 'rentready-test2'
+  functionAppName: 'rentready-test'
 
   # Agent VM image name
   vmImageName: 'vs2017-win2016'
