@@ -8,10 +8,10 @@ trigger:
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '3a048fac-a1a7-4b14-b41c-32b8f58b05fd'
+  azureSubscription: 'Main'
 
   # Function app name
-  functionAppName: 'rentready-test2'
+  functionAppName: $(functionName)
 
   # Agent VM image name
   vmImageName: 'vs2017-win2016'
@@ -82,6 +82,4 @@ stages:
               appName: $(functionAppName)
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               appSettings: |
-                -Dataverse_UserName $(Dataverse_UserName)
-                -Dataverse_Password $(Dataverse_Password)
-                -Dataverse_Environment $(Dataverse_Environment)
+                -Dataverse_UserName $(Dataverse_UserName) -Dataverse_Password $(Dataverse_Password) -Dataverse_Environment $(Dataverse_Environment)
