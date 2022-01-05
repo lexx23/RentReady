@@ -11,7 +11,7 @@ variables:
   azureSubscription: 'Main'
 
   # Function app name
-  functionAppName: $(functionAppName)
+  functionAppName: $(functionName)
 
   # Agent VM image name
   vmImageName: 'vs2017-win2016'
